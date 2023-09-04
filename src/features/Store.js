@@ -1,11 +1,8 @@
-import React from 'react';
+import { configureStore } from '@reduxjs/toolkit';
+import MovieSlice from './movies/MovieSlice';
 
-const Store = () => {
-    return (
-        <div>
-            store
-        </div>
-    );
-};
-
-export default Store;
+export const store = configureStore({
+    reducer: {
+        movies:MovieSlice,
+    },
+});
